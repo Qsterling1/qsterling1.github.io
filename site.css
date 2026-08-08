@@ -1,19 +1,19 @@
 /* Shared site styles. Standard system font, dark by default, light is opt-in. */
 :root{
-  --bg:#0E0F12;
-  --ink:#ECEEF1;
-  --muted:#A7ADB5;
-  --hair:#2A2E34;
-  --accent:#6E9BFF;
-  --card:#181A1E;
-}
-html[data-theme="light"]{
   --bg:#FFFFFF;
   --ink:#1A1C1F;
   --muted:#5A5F66;
   --hair:#E0E3E7;
   --accent:#2B5BD7;
   --card:#F6F7F9;
+}
+html[data-theme="dark"]{
+  --bg:#0E0F12;
+  --ink:#ECEEF1;
+  --muted:#A7ADB5;
+  --hair:#2A2E34;
+  --accent:#6E9BFF;
+  --card:#181A1E;
 }
 
 *{box-sizing:border-box;}
@@ -51,8 +51,18 @@ a:hover{text-decoration:underline;}
 
 .page{max-width:1120px;margin:0 auto;padding:46px 36px 84px;}
 
+.site-footer{
+  padding:20px 36px;text-align:center;
+  font-size:14px;color:var(--muted);line-height:1.4;
+}
+.site-footer p{margin:0;}
+.site-footer nav{margin:2px 0 0;}
+.site-footer nav a{color:var(--muted);margin:0 10px;font-size:14px;}
+.site-footer nav a:hover{color:var(--ink);}
+
 @media (max-width:760px){
   .site-header{padding:14px 20px;gap:14px;}
   .site-nav a{margin-left:16px;}
   .page{padding:30px 20px 64px;}
+  .site-footer{padding:22px 20px;}
 }

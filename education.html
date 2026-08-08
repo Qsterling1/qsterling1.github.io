@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quentin Sterling - Education</title>
-<script>try{var d=document.documentElement;if(localStorage.qsTheme)d.setAttribute('data-theme',localStorage.qsTheme);}catch(e){}</script>
+<script>try{var d=document.documentElement;var t=localStorage.qsTheme;if(t==='light'){localStorage.removeItem('qsTheme');}else if(t)d.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="stylesheet" href="site.css">
 <style>
   h1{font-size:32px;line-height:1.1;margin:0 0 12px;}
@@ -14,14 +14,15 @@
   .spotlight strong{color:var(--ink);}
   .spotlight .verified{display:block;font-size:14px;margin-top:4px;}
   @media (max-width:480px){ .spotlight-cert{flex-direction:column;align-items:flex-start;} }
-  .label{font-size:15px;font-weight:700;margin:26px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--hair);}
+  .label{font-size:26px;font-weight:700;margin:26px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--hair);}
   .degs{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;}
   .deg{margin-bottom:10px;}
   .deg .d{font-weight:700;}
   .deg .s{color:var(--muted);font-size:14px;}
   .certgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;}
-  .cert .cn{font-weight:700;}
-  .cert .cs{color:var(--muted);font-size:14px;margin-top:2px;}
+  .cert .cn{font-weight:400;}
+  .cert .cn a{font-size:12px;}
+  .cert .cs{color:var(--muted);font-size:13px;margin-top:2px;}
   @media (max-width:640px){ .degs,.certgrid{grid-template-columns:1fr;} }
 </style>
 </head>
@@ -35,6 +36,7 @@
         <a href="resume.html">Resume</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="education.html" class="here">Education</a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fqsterling1%2F&sa=D&sntz=1&usg=AOvVaw1RJF6JVCCIawx_6qA98nTM" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
       <button class="listen" id="playBtn" data-src="audio/education.mp3" type="button">Listen</button>
       <button class="icon-btn" id="themeBtn" type="button" title="Light or dark" aria-label="Toggle light or dark mode">☀</button>
@@ -50,46 +52,48 @@
 
     <p class="label">Degrees</p>
     <div class="degs">
-      <div class="deg"><div class="d">B.S. Software Engineering</div><div class="s">Western Governors University · in progress</div></div>
+      <div class="deg"><div class="d">B.S. Software Engineering</div><div class="s">Western Governors University | in progress</div></div>
       <div class="deg"><div class="d">MBA, International Business</div><div class="s">Chongqing University</div></div>
       <div class="deg"><div class="d">B.A. Communication</div><div class="s">Fairmont State University</div></div>
       <div class="deg"><div class="d">B.S. Psychology</div><div class="s">Fairmont State University</div></div>
     </div>
 
     <p class="label">Certificates</p>
+    <div class="cert" style="margin-bottom:18px;">
+      <div class="cn">Credly Badges <a href="https://www.credly.com/users/quentin-sterling" target="_blank" rel="noopener">(Link)</a></div>
+    </div>
     <div class="certgrid">
       <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/professional-cert/KBMC14M64ANK" target="_blank" rel="noopener">Google AI Professional Certificate</a></div>
-        <div class="cs">Google · 7 courses · 2026</div>
-      </div>
-      <div class="cert"><div class="cn"><a href="https://www.credly.com/users/quentin-sterling/edit/badges/credly" target="_blank" rel="noopener">Credly Badges</a></div></div>
-      <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/ZZ67ZIXCSS8J" target="_blank" rel="noopener">Introduction to Software Engineering</a></div>
-        <div class="cs">IBM · 2025</div>
+        <div class="cn">Google AI Professional Certificate <a href="https://coursera.org/verify/professional-cert/KBMC14M64ANK" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">Google | 7 courses | 2026</div>
       </div>
       <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/09V1X6L3KODW" target="_blank" rel="noopener">Introduction to HTML, CSS &amp; JavaScript</a></div>
-        <div class="cs">IBM · 2025</div>
+        <div class="cn">Introduction to Software Engineering <a href="https://coursera.org/verify/ZZ67ZIXCSS8J" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">IBM | 2025</div>
+      </div>
+      <div class="cert">
+        <div class="cn">Introduction to HTML, CSS &amp; JavaScript <a href="https://coursera.org/verify/09V1X6L3KODW" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">IBM | 2025</div>
+      </div>
+      <div class="cert">
+        <div class="cn">Game Design: Art and Concepts <a href="https://coursera.org/verify/specialization/DUWQG6PT2G9T" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">California Institute of the Arts | 2023</div>
+      </div>
+      <div class="cert">
+        <div class="cn">Foundations of User Experience (UX) Design <a href="https://coursera.org/verify/69QYN9HXC6YJ" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">Google | 2023</div>
+      </div>
+      <div class="cert">
+        <div class="cn">Fundamentals of Graphic Design <a href="https://coursera.org/verify/JXGY88RZLE8F" target="_blank" rel="noopener">(Link)</a></div>
+        <div class="cs">California Institute of the Arts | 2023</div>
       </div>
       <div class="cert">
         <div class="cn">Atlassian Agile Project Management</div>
-        <div class="cs">LinkedIn Learning with Atlassian · Professional Certificate · 2025 · Jira, Agile methodologies</div>
+        <div class="cs">LinkedIn Learning | 2025</div>
       </div>
       <div class="cert">
         <div class="cn">Project Management (Business 311)</div>
-        <div class="cs">Study.com · 29-hour course · 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/specialization/DUWQG6PT2G9T" target="_blank" rel="noopener">Game Design: Art and Concepts</a></div>
-        <div class="cs">California Institute of the Arts · Specialization · 2023 · game design, story and narrative, character and world design</div>
-      </div>
-      <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/69QYN9HXC6YJ" target="_blank" rel="noopener">Foundations of User Experience (UX) Design</a></div>
-        <div class="cs">Google · 2023</div>
-      </div>
-      <div class="cert">
-        <div class="cn"><a href="https://coursera.org/verify/JXGY88RZLE8F" target="_blank" rel="noopener">Fundamentals of Graphic Design</a></div>
-        <div class="cs">California Institute of the Arts · 2023</div>
+        <div class="cs">Study.com | 2026</div>
       </div>
     </div>
 
@@ -125,6 +129,12 @@
       </div>
     </div>
   </main>
+
+<footer class="site-footer">
+  <p>Quentin Sterling <span class="pipe">|</span> <span id="emF"></span> <a href="#" id="emBtnF" aria-label="Send email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg></a></p>
+  <p>Los Angeles, CA <span class="pipe">|</span> linkedin.com/in/qsterling1</p>
+  <nav><a href="index.html">About</a><span class="pipe">|</span><a href="resume.html">Resume</a><span class="pipe">|</span><a href="portfolio.html">Portfolio</a><span class="pipe">|</span><a href="education.html">Education</a></nav>
+</footer>
 
 <script src="site.js"></script>
 </body>

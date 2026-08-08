@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quentin Sterling | Portfolio</title>
-<script>try{var d=document.documentElement;if(localStorage.qsTheme)d.setAttribute('data-theme',localStorage.qsTheme);}catch(e){}</script>
+<script>try{var d=document.documentElement;var t=localStorage.qsTheme;if(t==='light'){localStorage.removeItem('qsTheme');}else if(t)d.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="stylesheet" href="site.css">
 <style>
   html,body{height:100%;}
@@ -43,6 +43,7 @@
         <a href="resume.html">Resume</a>
         <a href="portfolio.html" class="here">Portfolio</a>
         <a href="education.html">Education</a>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fqsterling1%2F&sa=D&sntz=1&usg=AOvVaw1RJF6JVCCIawx_6qA98nTM" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
       <button class="listen" id="playBtn" data-src="audio/portfolio.mp3" type="button">Listen</button>
       <button class="icon-btn" id="themeBtn" type="button" title="Light or dark" aria-label="Toggle light or dark mode">☀</button>

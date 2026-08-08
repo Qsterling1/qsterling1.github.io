@@ -1,11 +1,11 @@
 (function(){
   var d = document.documentElement;
   var t = document.getElementById('themeBtn');
-  function isLight(){ return d.getAttribute('data-theme') === 'light'; }
-  function sync(){ if (t) t.textContent = isLight() ? '☾' : '☀'; }
+  function isDark(){ return d.getAttribute('data-theme') === 'dark'; }
+  function sync(){ if (t) t.textContent = isDark() ? '☀' : '☾'; }
   if (t) t.addEventListener('click', function(){
-    if (isLight()){ d.removeAttribute('data-theme'); try{ localStorage.removeItem('qsTheme'); }catch(e){} }
-    else { d.setAttribute('data-theme','light'); try{ localStorage.qsTheme = 'light'; }catch(e){} }
+    if (isDark()){ d.removeAttribute('data-theme'); try{ localStorage.removeItem('qsTheme'); }catch(e){} }
+    else { d.setAttribute('data-theme','dark'); try{ localStorage.qsTheme = 'dark'; }catch(e){} }
     sync();
   });
   sync();
@@ -21,4 +21,12 @@
     });
     audio.addEventListener('ended', function(){ setLabel(false); });
   }
+
+  var u='Sterling_Q';var h='Outlook.com';var addr=u+'@'+h;
+  ['','F'].forEach(function(s){
+    var sp=document.getElementById('em'+s);
+    var bt=document.getElementById('emBtn'+s);
+    if(sp)sp.textContent=addr;
+    if(bt)bt.addEventListener('click',function(e){e.preventDefault();window.location='mail'+'to:'+addr;});
+  });
 })();
